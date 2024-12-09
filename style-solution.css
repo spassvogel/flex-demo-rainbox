@@ -1,0 +1,165 @@
+/*
+  Hier gaan we wat leren over flex 💪 box!
+  Er is altijd sprake van een CONTAINER (de parent)
+  en 1 of meer (meestal meer) FLEX ITEMS (children)
+  let op dat je de CSS bij de juiste gebruikt!
+*/
+
+.flex-container {
+  margin: 0 auto;
+  padding: 20px;
+  background-color: grey;
+  height: 250px;
+
+  /* 1. De eerste stap voor flexbox is altijd: `display: flex`
+        Hiermee zetten we flexbox aan (op de container).
+        wat gebeurt er met de positie en de grootte van de 
+        regenboog items? */
+
+  /* display: flex; */
+
+
+  /* 2. Flexbox hanteert een MAIN axis en een CROSS axis
+        (een hoofd as, en een as die daar kruislings op staat). 
+        om te bepalen hoe de items 'flowen'. 
+        Welke as dat is bepaal je met `flex-direction`
+
+        Standaard staat `flex-direction` op: row
+        probeer de andere opties en daarna weer terug naar 'row' */
+
+  /* flex-direction: row; */
+  /* flex-direction: row-reverse; */
+  /* flex-direction: column; */
+  /* flex-direction: column-reverse; */
+  /* flex-direction: row; */
+
+
+  /* 3. Standaard zullen items langs de MAIN axis lopen
+        en als het niet meer past, overflowen.
+
+        Maar met `flex-wrap` kun je ervoor zorgen dat ze op de 
+        volgende regel beginnen.
+        Let op dit hangt zeer samen met `flex-direction`! 
+        Probeer de optie 'wrap' en daarna weer terug naar 'nowrap' */
+
+  /* flex-wrap: no-wrap; */
+  /* flex-wrap: wrap;   */
+  /* flex-wrap: no-wrap; */
+
+
+  /* 4. Om de items uit te lijnen over de MAIN axis,
+        gebruiken we `justify-content`.
+
+        Standaard staat die op: flex-start.
+        Probeer de andere opties. Let vooral op het 
+        subtiele verschil tussen
+        ('space-between' en 'space-around')
+
+        Ook deze property zorgt voor een heel ander resultaat
+        bij een andere `flex-direction` (dus een andere MAIN axis) */
+
+  /* justify-content: flex-start; */
+  /* justify-content: flex-end; */
+  /* justify-content: center; */
+  /* justify-content: space-between; */
+  /* justify-content: space-around; */
+  /* justify-content: flex-start; */
+
+  /* 5. Viel het je op dat (bij `flex-direction: row`) de items
+        opeens heel langwerpig werden? Dat komt door `align-items`.
+
+        `align-items` is voor de uitlijning over de CROSS axis
+        en staat standaard op: 'stretch'. Maar er zijn ook andere opties! */
+
+  /* align-items: stretch; */
+  /* align-items: flex-start; */
+  /* align-items: flex-end; */
+  /* align-items: center; */
+  /* align-items: stretch; */
+
+  /*    Als je goed hebt opgelet realiseer je je misschien dat een 
+        combinatie van `justify-content: center` en `align-items: center` 
+        alles precies in het midden zet!  */
+}
+
+.flex-item {
+  /*    Tot nu toe hebben we alleen dingen op de flex container ingesteld
+        We kunnen bepaalde zaken ook op de flex items regelen. */
+
+  /* 6. Je kunt de breedte instellen van alle items op 100px
+        (zorg ervoor dat `flex-direction` nog op row staat) **/
+
+  /* width: 100px; */
+
+  /*    Maak nu je browserscherm minder breed zodat de regenboog items
+        niet meer zouden passen...
+
+        Je merkt dat de items kleiner worden!!
+        Dat is maf, je hebt toch de breedte op 100px gezet?
+
+        Dat komt omdat flexbox de breedte overneemt. En standaard hebben
+        flex items de property `flex-shrink: 1`. Dit kun je ook veranderen
+        met `flex-shrink: 0` */
+
+  /* flex-shrink: 0; */
+
+
+  /* 7. Het tegenovergestelde van `flex-shrink` is `flex-grow`.
+        Die staat standaard op 0 (geen groei). 
+        Maar laten we dit nu aanpassen naar 1 */
+
+  /* flex-grow: 1; */
+
+  /** 8. We kunnen flexboxes ook nesten, in elkaar stoppen
+         als een matroesjka-pop. Als we display: flex op de .flex-item class
+         zetten, dan is de flex-item zowel een flex item, als ook weer
+         een flex container, voor de H2 elementen erin! */
+
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+}
+
+
+/**
+    That's all folks!
+
+    Meer informatie?
+  - https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+  - https://www.freecodecamp.org/news/even-more-about-how-flexbox-works-explained-in-big-colorful-animated-gifs-a5a74812b053/
+  - https://flexboxfroggy.com/ 🐸
+*/
+
+
+html {
+  font-family: sans-serif;
+}
+
+h2 {
+  margin: 8px;
+}
+
+.flex-item {
+  border-radius: 10px;
+  color: white;
+  padding: 10px;
+}
+
+.flex-item:nth-child(1) {
+  background-color: #e81416;
+}
+.flex-item:nth-child(2) {
+  background-color: #ffa500;
+}
+.flex-item:nth-child(3) {
+  background-color: #faeb36;
+}
+.flex-item:nth-child(4) {
+  background-color: #79c314;
+}
+.flex-item:nth-child(5) {
+  background-color: #487de7;
+}
+.flex-item:nth-child(6) {
+  background-color: #4b369d;
+}
