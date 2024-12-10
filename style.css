@@ -16,8 +16,6 @@
         wat gebeurt er met de positie en de grootte van de 
         regenboog items? */
 
-
-
   /* 2. Flexbox hanteert een MAIN axis en een CROSS axis
         (een hoofd as, en een as die daar kruislings op staat). 
         om te bepalen hoe de items 'flowen'. 
@@ -26,15 +24,16 @@
         Standaard staat `flex-direction` op: row
         probeer de andere opties en daarna weer terug naar 'row' */
 
-
-
   /* 3. Standaard zullen items langs de MAIN axis lopen
         en als het niet meer past, overflowen.
 
         Maar met `flex-wrap` kun je ervoor zorgen dat ze op de 
         volgende regel beginnen.
         Let op dit hangt zeer samen met `flex-direction`! 
-        Probeer de optie 'wrap' en daarna weer terug naar 'nowrap' */
+        Zet eerst de `width: 100px` op de .flex-item.
+        
+        Probeer dan hier de optie 'wrap' en daarna weer 
+        terug naar 'nowrap' */
 
 
 
@@ -59,15 +58,14 @@
 }
 
 .flex-item {
+  /* width: 200px; */
+
   /*    Tot nu toe hebben we alleen dingen op de flex container ingesteld
-        We kunnen bepaalde zaken ook op de flex items regelen. */
+        We kunnen bepaalde zaken ook op de flex items regelen. 
 
-  /* 6. Je kunt de breedte instellen van alle items op 100px
-        (zorg ervoor dat `flex-direction` nog op row staat) **/
+     6. Zet de breedte van de flex items weer op 200px
 
-
-
-  /*    Maak nu je browserscherm minder breed zodat de regenboog items
+        Maak nu je browserscherm minder breed zodat de regenboog items
         niet meer zouden passen...
 
         Je merkt dat de items kleiner worden!!
