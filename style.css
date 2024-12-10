@@ -9,7 +9,7 @@
   margin: 0 auto;
   padding: 20px;
   background-color: grey;
-  height: 250px;
+  height: 650px;
 
   /* 1. De eerste stap voor flexbox is altijd: `display: flex`
         Hiermee zetten we flexbox aan (op de container).
@@ -56,11 +56,6 @@
 
         `align-items` is voor de uitlijning over de CROSS axis
         en staat standaard op: 'stretch'. Maar er zijn ook andere opties! */
-
-
-  /*    Als je goed hebt opgelet realiseer je je misschien dat een 
-        combinatie van `justify-content: center` en `align-items: center` 
-        alles precies in het midden zet!  */
 }
 
 .flex-item {
@@ -76,7 +71,7 @@
         niet meer zouden passen...
 
         Je merkt dat de items kleiner worden!!
-        Dat is maf, je hebt toch de breedte op 100px gezet?
+        Dat is raar, je hebt toch de breedte op 100px gezet?
 
         Dat komt omdat flexbox de breedte overneemt. En standaard hebben
         flex items de property `flex-shrink: 1`. Dit kun je ook veranderen
@@ -93,12 +88,19 @@
   /** 8. We kunnen flexboxes ook nesten, in elkaar stoppen
          als een matroesjka-pop. Als we display: flex op de .flex-item class
          zetten, dan is de flex-item zowel een flex item, als ook weer
-         een flex container, voor de H2 elementen erin! */
-
-
-
+         een flex container, voor de H2 elementen erin!
+         
+         Zet de `justify-content` op 'center' */
 }
 
+  /** 9. Als laatste kunnen we ook de volgorde van iedere flex item
+         aanpassen met de `order` property. Hier is het dus noodzakelijk
+         om één individuele item aan te spreken in plaats van *alle items*
+         
+         Standaard staat de `order` op '0', je kunt die zelf op een 
+         positieve of negatieve waarde zetten om de volgorde aan te passen. */
+#item1 {
+}
 
 /**
     That's all folks!
