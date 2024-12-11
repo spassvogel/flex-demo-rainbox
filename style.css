@@ -24,6 +24,8 @@
         Standaard staat `flex-direction` op: row
         probeer de andere opties en daarna weer terug naar 'row' */
 
+
+
   /* 3. Standaard zullen items langs de MAIN axis lopen
         en als het niet meer past, overflowen.
 
@@ -34,8 +36,6 @@
         
         Probeer dan hier de optie 'wrap' en daarna weer 
         terug naar 'nowrap' */
-
-
 
   /* 4. Om de items uit te lijnen over de MAIN axis,
         gebruiken we `justify-content`.
@@ -49,16 +49,16 @@
         bij een andere `flex-direction` (dus een andere MAIN axis) */
 
 
-
   /* 5. Viel het je op dat (bij `flex-direction: row`) de items
         opeens heel langwerpig werden? Dat komt door `align-items`.
 
         `align-items` is voor de uitlijning over de CROSS axis
         en staat standaard op: 'stretch'. Maar er zijn ook andere opties! */
+
+
 }
 
 .flex-item {
-  /* width: 200px; */
 
   /*    Tot nu toe hebben we alleen dingen op de flex container ingesteld
         We kunnen bepaalde zaken ook op de flex items regelen. 
@@ -69,18 +69,16 @@
         niet meer zouden passen...
 
         Je merkt dat de items kleiner worden!!
-        Dat is raar, je hebt toch de breedte op 100px gezet?
+        Dat is raar, je hebt toch de breedte op 200px gezet?
 
         Dat komt omdat flexbox de breedte overneemt. En standaard hebben
         flex items de property `flex-shrink: 1`. Dit kun je ook veranderen
         met `flex-shrink: 0` */
 
 
-
   /* 7. Het tegenovergestelde van `flex-shrink` is `flex-grow`.
         Die staat standaard op 0 (geen groei). 
         Maar laten we dit nu aanpassen naar 1 */
-
 
 
   /** 8. We kunnen flexboxes ook nesten, in elkaar stoppen
@@ -97,6 +95,7 @@
          
          Standaard staat de `order` op '0', je kunt die zelf op een 
          positieve of negatieve waarde zetten om de volgorde aan te passen. */
+
 #item1 {
 }
 
